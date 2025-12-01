@@ -1,0 +1,55 @@
+# PowerShell artifacts
+*.pdb
+*.dll
+*.exe
+*.cache
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# User-specific files
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# PowerShell transcripts
+PowerShell_transcript.*
+
+# Old files
+*.ps1-old
+*.zip
