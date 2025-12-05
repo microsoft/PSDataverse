@@ -73,7 +73,7 @@ function Connect-PSDVOrg {
         [String]
         $DataverseOrgURL,
 
-        [Parameter(Mandatory)]
+        [Parameter(Mandatory, ParameterSetName = 'InteractiveLogin')]
         [ValidateSet('AzureCloud', 'AzureChinaCloud', 'AzureUSGovernment', 'AzureGermanCloud')]
         [String]
         $Environment
@@ -337,11 +337,15 @@ function Invoke-PSDVWebRequest {
 
         # Handle paging by following @odata.nextLink
         do {
-            if ($jsonResponse.value) {
+           if ($jsonResponse.value.count -gt 0) {
                 $allResults += $jsonResponse.value
             }
+            elseif ($jsonResponse.PSObject.Properties.Name -contains 'Value' -and $jsonResponse.value.count -eq 0) {
+                # empty collection, no results
+                return $null
+            }
             else {
-                # Single item response (no .value property)
+                #single item
                 return $jsonResponse
             }
 
