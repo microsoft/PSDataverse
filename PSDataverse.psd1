@@ -21,13 +21,13 @@ CompatiblePSEditions = @('Desktop', 'Core')
 GUID = 'a4c2e4d6-8f2e-4c1a-b3e5-7d9f1e2c3a4b'
 
 # Author of this module
-Author = 'PSDataverse Module'
+Author = 'Microsoft Corporation'
 
 # Company or vendor of this module
-CompanyName = 'Unknown'
+CompanyName = 'Microsoft Corporation'
 
 # Copyright statement for this module
-Copyright = '(c) 2025 PSDataverse Module. All rights reserved.'
+Copyright = '(c) Microsoft Corporation. All rights reserved.'
 
 # Description of the functionality provided by this module
 Description = 'PowerShell module for interacting with Microsoft Dataverse environments. Provides comprehensive functionality for connecting to Dataverse, managing authentication, and performing CRUD operations on tables and records.'
@@ -113,36 +113,41 @@ PrivateData = @{
         Tags = @('Dataverse', 'PowerPlatform', 'CRM', 'Dynamics365', 'REST', 'API', 'Microsoft')
 
         # A URL to the license for this module.
-        # LicenseUri = ''
+        LicenseUri = 'https://github.com/microsoft/PSDataverse/blob/main/LICENSE'
 
         # A URL to the main website for this project.
-        # ProjectUri = ''
+        ProjectUri = 'https://github.com/microsoft/PSDataverse'
 
         # A URL to an icon representing this module.
-        # IconUri = ''
+        IconUri = 'https://raw.githubusercontent.com/microsoft/PSDataverse/main/icon.png'
 
         # ReleaseNotes of this module
         ReleaseNotes = @'
-Initial release of PSDataverse module.
+PSDataverse v1.0.0 - Initial Release
 
-Features:
-- Connect to Microsoft Dataverse environments with multiple authentication methods
-- Support for Service Principal, Managed Identity, and Interactive authentication
-- Comprehensive CRUD operations for Dataverse tables
-- Advanced querying with OData filters, expansion, and field selection
-- Table and column metadata retrieval
-- Audit history and change tracking
+This is the initial release of the PSDataverse PowerShell module providing comprehensive Microsoft Dataverse integration capabilities.
+
+Key Features:
+- Multiple authentication methods (Service Principal, Managed Identity, Interactive)
+- Complete CRUD operations for Dataverse tables and records
+- Advanced OData querying with filters, expansion, and field selection
+- Table and column metadata operations with filtering support
+- Audit history and change tracking capabilities
 - Automatic token refresh and session management
-- Support for pagination of large result sets
-- PowerShell 7.3+ compatibility
-- Constrained Language Mode (CLM) support
+- Support for large result set pagination
+- PowerShell 7.3+ compatibility with Constrained Language Mode support
+- PSScriptAnalyzer compliant code following best practices
+- Comprehensive help documentation with examples
+- Module installation and testing utilities
+
+For detailed documentation, visit: https://github.com/microsoft/PSDataverse
 '@
 
         # Prerelease string of this module
         # Prerelease = ''
 
         # Flag to indicate whether the module requires explicit user acceptance for install/update/save
-        # RequireLicenseAcceptance = $false
+        RequireLicenseAcceptance = $true
 
         # External dependent modules of this module
         # ExternalModuleDependencies = @()
@@ -152,7 +157,7 @@ Features:
 } # End of PrivateData hashtable
 
 # HelpInfo URI of this module
-# HelpInfoURI = ''
+HelpInfoURI = 'https://github.com/microsoft/PSDataverse/blob/main/README.md'
 
 # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
 # DefaultCommandPrefix = ''
