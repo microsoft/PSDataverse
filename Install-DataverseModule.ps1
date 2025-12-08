@@ -1,5 +1,5 @@
-# PSDataverse Module Installation Script
-# This script helps install the PSDataverse module to your PowerShell modules directory
+# Dataverse Module Installation Script
+# This script helps install the Dataverse module to your PowerShell modules directory
 
 param(
     [Parameter()]
@@ -10,16 +10,16 @@ param(
     [switch]$Force
 )
 
-Write-Host "PSDataverse Module Installation Script" -ForegroundColor Green
-Write-Host "======================================" -ForegroundColor Green
+Write-Host "Dataverse Module Installation Script" -ForegroundColor Green
+Write-Host "===================================" -ForegroundColor Green
 
 # Determine target path based on scope
 if ($Scope -eq 'CurrentUser') {
-    $targetPath = Join-Path $env:USERPROFILE "Documents\PowerShell\Modules\PSDataverse"
+    $targetPath = Join-Path $env:USERPROFILE "Documents\PowerShell\Modules\Dataverse"
     Write-Host "Installing for current user..." -ForegroundColor Yellow
 }
 else {
-    $targetPath = Join-Path $env:PROGRAMFILES "PowerShell\Modules\PSDataverse"
+    $targetPath = Join-Path $env:PROGRAMFILES "PowerShell\Modules\Dataverse"
     Write-Host "Installing for all users (requires admin privileges)..." -ForegroundColor Yellow
 }
 
@@ -55,10 +55,10 @@ catch {
 # Copy module files
 try {
     $sourceFiles = @(
-        "PSDataverse.psd1",
-        "PSDataverse.psm1",
+        "Dataverse.psd1",
+        "Dataverse.psm1",
         "README.md",
-        "Test-PSDataverseModule.ps1"
+        "Test-DataverseModule.ps1"
     )
     
     foreach ($file in $sourceFiles) {
@@ -80,8 +80,8 @@ catch {
 # Verify installation
 try {
     Write-Host "`nVerifying installation..." -ForegroundColor Yellow
-    Import-Module PSDataverse -Force
-    $module = Get-Module PSDataverse
+    Import-Module Dataverse -Force
+    $module = Get-Module Dataverse
     
     if ($module) {
         Write-Host "✓ Module installed successfully!" -ForegroundColor Green
@@ -121,9 +121,9 @@ else {
 Write-Host "`n======================================" -ForegroundColor Green
 Write-Host "Installation completed successfully!" -ForegroundColor Green
 Write-Host "`nNext steps:" -ForegroundColor Yellow
-Write-Host "1. Start a new PowerShell session or run: Import-Module PSDataverse" -ForegroundColor White
-Write-Host "2. Use Get-Command -Module PSDataverse to see available functions" -ForegroundColor White
+Write-Host "1. Start a new PowerShell session or run: Import-Module Dataverse" -ForegroundColor White
+Write-Host "2. Use Get-Command -Module Dataverse to see available functions" -ForegroundColor White
 Write-Host "3. Use Get-Help Connect-PSDVOrg -Full to get started" -ForegroundColor White
-Write-Host "4. Run the test script: .\Test-PSDataverseModule.ps1" -ForegroundColor White
+Write-Host "4. Run the test script: .\Test-DataverseModule.ps1" -ForegroundColor White
 
 Write-Host "`nModule is ready to use!" -ForegroundColor Green

@@ -1,17 +1,17 @@
-# PSDataverse Module Test Script
+# Dataverse Module Test Script
 # This script provides basic tests to verify the module functionality
 
-Write-Host "PSDataverse Module Test Script" -ForegroundColor Green
-Write-Host "==============================" -ForegroundColor Green
+Write-Host "Dataverse Module Test Script" -ForegroundColor Green
+Write-Host "============================" -ForegroundColor Green
 
 # Test 1: Import Module
 Write-Host "`n1. Testing Module Import..." -ForegroundColor Yellow
 try {
-    Import-Module $PSScriptRoot\PSDataverse.psd1 -Force
+    Import-Module $PSScriptRoot\Dataverse.psd1 -Force
     Write-Host "   ✓ Module imported successfully" -ForegroundColor Green
     
     # Show module info
-    $moduleInfo = Get-Module PSDataverse
+    $moduleInfo = Get-Module Dataverse
     Write-Host "   Module Version: $($moduleInfo.Version)" -ForegroundColor Cyan
     Write-Host "   Module Path: $($moduleInfo.ModuleBase)" -ForegroundColor Cyan
 }
@@ -37,7 +37,7 @@ $expectedFunctions = @(
     'Remove-PSDVTableItem'
 )
 
-$availableFunctions = Get-Command -Module PSDataverse | Select-Object -ExpandProperty Name
+$availableFunctions = Get-Command -Module Dataverse | Select-Object -ExpandProperty Name
 $missingFunctions = $expectedFunctions | Where-Object { $_ -notin $availableFunctions }
 
 if ($missingFunctions.Count -eq 0) {
