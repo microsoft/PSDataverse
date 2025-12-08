@@ -1,4 +1,4 @@
-# Dataverse PowerShell Module
+# PSDataverse PowerShell Module
 
 A comprehensive PowerShell module for interacting with Microsoft Dataverse environments. This module provides full CRUD operations, authentication management, and advanced querying capabilities for Dataverse tables and records.
 
@@ -23,20 +23,20 @@ A comprehensive PowerShell module for interacting with Microsoft Dataverse envir
 ### Manual Installation
 
 1. Download or clone this repository
-2. Copy the `Dataverse` folder to one of your PowerShell module paths:
+2. Copy the `PSDataverse` folder to one of your PowerShell module paths:
    - User modules: `$env:USERPROFILE\Documents\PowerShell\Modules\`
    - System modules: `$env:PROGRAMFILES\PowerShell\Modules\`
 
 3. Import the module:
    ```powershell
-   Import-Module Dataverse
+   Import-Module PSDataverse
    ```
 
 ### Verify Installation
 
 ```powershell
-Get-Module Dataverse -ListAvailable
-Get-Command -Module Dataverse
+Get-Module PSDataverse -ListAvailable
+Get-Command -Module PSDataverse
 ```
 
 ## Quick Start
