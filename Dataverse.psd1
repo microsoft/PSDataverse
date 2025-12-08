@@ -21,7 +21,7 @@ CompatiblePSEditions = @('Desktop', 'Core')
 GUID = 'b8d2f4a6-3c5e-4f1d-9a8b-7e2c1f5d3a9e'
 
 # Author of this module
-Author = 'Microsoft Corporation'
+Author = 'Mike Lacher, Jonathan Dimino @ Microsoft Corporation'
 
 # Company or vendor of this module
 CompanyName = 'Microsoft Corporation'
@@ -119,7 +119,7 @@ PrivateData = @{
         ProjectUri = 'https://github.com/microsoft/Dataverse'
 
         # A URL to an icon representing this module.
-        IconUri = 'https://raw.githubusercontent.com/microsoft/Dataverse/main/icon.png'
+        IconUri = ''
 
         # ReleaseNotes of this module
         ReleaseNotes = @'
